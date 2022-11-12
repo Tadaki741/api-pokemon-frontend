@@ -3,5 +3,8 @@ import { useQuery } from 'react-query';
 
 
 export default function usePokemonData() {
-    return useQuery('allPokemonData' , () => axios.get('/pokemon').then(res => res.data));
+    return useQuery('allPokemonData' , async () => {
+        const response = await axios.get('/pokemon')
+        return response.data
+    });
 }

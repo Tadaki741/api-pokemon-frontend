@@ -9,7 +9,7 @@ export default function useNotification() {
       (t) => (
         <div
           className={`bg-green-500 text-white px-6 py-4 shadow-md rounded-full ${
-            t.visible ? "animate-enter" : "animate-leave"
+            t.visible ? "animate-pulse" : "animate-bounce"
           }`}
         >
           Success !
